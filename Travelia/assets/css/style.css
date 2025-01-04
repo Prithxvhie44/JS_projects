@@ -204,6 +204,10 @@ body
   box-shadow: var(--shadow-3);
 }
 
+body.nav-active{
+  overflow: hidden;
+}
+
 
 
 
