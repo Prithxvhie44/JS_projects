@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="1.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <a href="#about">About Us</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+        <div class="hero bg-light text-center py-5">
+            <div class="container">
+                <h1 class="display-4">Welcome to the landing page</h1>
+                <h2 class="chotu">This landing page is made by <span class="bold">Prithviraj</span></h2>
+                <p class="lead mt-4">At Lorem Ipsum Solutions, we believe that innovation is the cornerstone of progress. Our team of dedicated professionals is committed to delivering cutting-edge solutions that simplify your life and enhance productivity. Whether you're looking for advanced tools to manage your business or creative designs to make a lasting impression, we've got you covered. With years of experience and a passion for excellence, we take pride in creating products that meet your unique needs. Join us on a journey of growth, innovation, and success—because your dreams deserve the best foundation.</p>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="about" class="p-2 m-5">
+            <h2 class="about-head">About Us</h2>
+            <p class="para">We provide innovative solutions to help you grow and achieve your goals. Learn more about our mission, vision, and services below.</p>
+        </section>
+        
+        <section id="features" class="p-2 m-5">
+            <h2 class="about-head">Features</h2>
+            <p class="para">Our platform is designed to help you grow your business. Learn more about our features below.</p>
+        </section>
+        
+        <section id="contact" class="p-2 m-5">
+            <h2 class="about-head">Contact Us</h2>
+            <p class="para">Have questions or need help? Contact us below.</p>
+            <form action="1.php" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>Landing page @2025 made by prithviraj #assignment 1</p>
+    </footer>
+</body>
+</html>
