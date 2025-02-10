@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input form JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="form-container">
+        <h1>Enter your details in form</h1>
+        <form id="Userform">
+            <input type="text" id="name" placeholder="Enter Name" required>
+            <input type="email" id="email" placeholder="Enter Email" required>
+            <input type="number" id="phone" placeholder="Enter Phone" required>
+            <input type="number" id="age" placeholder="Enter Age" required>
+            <input type="number" id="Roll_no" placeholder="Enter Roll no" required>
+            <button type="button" class="btn-submit" onclick="submitForm()">Submit</button>
+            <button type="button" class="btn-cancel" onclick="cancelForm()">Cancel</button>
+        </form>
+    </div>
+    <div class="display">
+    <p id="status"></p>
+</div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
