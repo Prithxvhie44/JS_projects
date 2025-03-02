@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button Demo</title>
+    <style>
+        /* CSS Styling for the button */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .btn-container {
+            text-align: center;
+        }
+        
+        .fancy-btn {
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .fancy-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .fancy-btn:active {
+            background-color: #3e8e41;
+            transform: translateY(0);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .message-area {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            min-height: 100px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-container">
+        <button id="demoButton" class="fancy-btn">Click Me!</button>
+        <div id="messageArea" class="message-area">Console output will appear here</div>
+    </div>
+
+    <script>
+        // JavaScript functionality for the button
+        
+        // Console demo and comments
+        // This is a single line comment
+        /* This is a 
+           multi-line comment */
+        
+        // Variables
+        let clickCount = 0;  // Number datatype
+        const buttonMessage = "Button Clicked!"; // String datatype
+        let isButtonActive = true; // Boolean datatype
+        
+        // Reference to DOM elements
+        const button = document.getElementById('demoButton');
+        const messageArea = document.getElementById('messageArea');
+        
+        // Function to show console output in the page
+        function logToPage(message) {
+            messageArea.innerHTML += message + "<br>";
+            // String concatenation example
+            console.log("Logged: " + message);
+        }
+        
+        // Clear previous messages
+        function clearLog() {
+            messageArea.innerHTML = "";
+        }
+        
+        // Function to handle button click
+        function handleButtonClick() {
+            // Increment click count - arithmetic operator
+            clickCount += 1;
+            
+            // Clear previous messages
+            clearLog();
+            
+            // Built-in objects (Date)
+            const currentTime = new Date();
+            
+            // String method
+            logToPage("Message: " + buttonMessage.toUpperCase());
+            
+            // Arithmetic operators
+            const doubledClicks = clickCount * 2;
+            const squaredClicks = Math.pow(clickCount, 2);
+            
+            // Conditional statements
+            if (clickCount === 1) {
+                logToPage("This is your first click!");
+            } else if (clickCount > 5) {
+                logToPage("You've clicked " + clickCount + " times - you must like this button!");
+            } else {
+                logToPage("Click count: " + clickCount);
+            }
+            
+            // Function with scope example
+            function calculateClickStats() {
+                // Local variable - only available within this function
+                const clickMessage = "Click statistics:";
+                logToPage(clickMessage);
+                
+                // Accessing outer scope variables
+                logToPage("Doubled: " + doubledClicks);
+                logToPage("Squared: " + squaredClicks);
+                
+                // Return a value
+                return currentTime.toLocaleTimeString();
+            }
+            
+            // Call the nested function
+            const timeClicked = calculateClickStats();
+            
+            // Show the alert with multiple concepts combined
+            alert(`${buttonMessage}\nClick count: ${clickCount}\nTime: ${timeClicked}`);
+        }
+        
+        // Event listener for button
+        button.addEventListener('click', handleButtonClick);
+        
+        // Initial message
+        logToPage("Click the button to see JavaScript in action!");
+    </script>
+</body>
+</html>
