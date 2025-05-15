@@ -5,3 +5,15 @@ const port = 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);
 });
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.get("/about",(req,res) => {
+  res.send("About Page");
+});
+
+app.get("/contact",(req, req)=> {
+  res.send("Contact Page");
+});
